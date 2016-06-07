@@ -1,0 +1,15 @@
+﻿@model AspNetMvcCoreNullContainer.Models.TopLevelClass
+
+<div>
+    @Html.Editor("Initialized.MultilineText")
+    @Html.Editor("NotInitialized.MultilineText")
+
+    Both should be text areas.
+</div>
+
+<div>
+    @Html.EditorFor(x => x.Initialized.MultilineText)
+    @Html.EditorFor(x => x.NotInitialized.MultilineText)
+
+    EditorFor seems unaffected however.
+</div>
